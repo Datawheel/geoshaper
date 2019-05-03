@@ -7,8 +7,8 @@ import geoshaper as gsh
 
 gsh.convert("cb_2017_us_division_20m", "topojson", "myfile")
 
-[1] myfile.json has been saved successfully!
 
+[1] myfile.json has been saved successfully!
 ```
 
 ### convert()
