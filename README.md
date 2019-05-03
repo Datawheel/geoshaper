@@ -1,7 +1,7 @@
 # Setup and Installation
 `pip install geoshaper`
 
-# Hello World
+# Getting started
 ```
 import geoshaper as gsh
 
