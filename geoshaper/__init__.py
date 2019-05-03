@@ -51,3 +51,5 @@ def convert(folder_name=INPUT_FILE, output_format=DEFAULT_FORMAT, output_name=OU
         gdf.to_file("temp_geojson.json", driver="GeoJSON")
         topojson("temp_geojson.json", output, quantization=1e6, simplify=0.0001)
         remove("temp_geojson.json")
+    
+    print ("{} has been saved successfully!".format(output))
