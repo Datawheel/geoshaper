@@ -5,3 +5,4 @@ geoshaper/__pycache__
 geoshaper.egg-info
 dist/
 build/
+*.sh

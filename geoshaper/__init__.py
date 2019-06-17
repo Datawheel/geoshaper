@@ -6,13 +6,12 @@ import fiona
 import geopandas as gpd
 import pandas as pd
 
-DEFAULT_FORMAT = "geojson"
-INPUT_FILE = "shapes"
-OUTPUT_NAME = "output"
+PATH = "shapes"
+OUTPUT_NAME = "output.json"
 
 class GeoShaper:
-    def __init__(self, folder_name=INPUT_FILE):
-        self.gdf = self._convert(folder_name) if isinstance(folder_name, str) else folder_name
+    def __init__(self, data=PATH):
+        self.gdf = self._convert(data) if isinstance(data, str) else data
 
 
     def _isvalid(self, geom):
@@ -48,13 +47,13 @@ class GeoShaper:
         return gdf
 
 
-    def to_geojson(self, output_name=OUTPUT_NAME):
+    def to_geojson(self, path=OUTPUT_NAME):
         gdf = self.gdf
-        gdf.to_file(output_name, driver="GeoJSON")
+        gdf.to_file(path, driver="GeoJSON")
 
 
-    def to_topojson(self, output_name=OUTPUT_NAME, quantization=1e6, simplify=0.0001):
+    def to_topojson(self, path=OUTPUT_NAME, quantization=1e6, simplify=0.0001):
         gdf = self.gdf
         gdf.to_file("_temp_geojson.json", driver="GeoJSON")
-        topojson("_temp_geojson.json", output_name, quantization=quantization, simplify=simplify)
+        topojson("_temp_geojson.json", path, quantization=quantization, simplify=simplify)
         remove("_temp_geojson.json")
