@@ -13,12 +13,12 @@ setup(
     install_requires=[
         "fiona",
         "geopandas",
-        "json",
         "pandas",
         "shapely",
         "topojson"
     ],
     dependency_links=[
+      "shapely",
       "git+ssh://git@https://github.com/calvinmetcalf/topojson.py.git#egg=0.1.01.dev0",
     ],
     keywords=["geojson", "topojson", "shapes"],
