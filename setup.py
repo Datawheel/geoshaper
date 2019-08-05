@@ -3,9 +3,9 @@ from setuptools import setup
 setup(
     name="geoshaper",
     version="0.0.2",
-    description="An open source library to convert shape files to GeoJSON/TopoJSON",
-    url="http://github.com/Datawheel/gepshaper",
-    download_url="http://github.com/Datawheel/gepshaper/archive/0.0.2.tar.gz",
+    description="An open source library to convert .shp files to GeoJSON/TopoJSON",
+    url="http://github.com/Datawheel/geoshaper",
+    download_url="http://github.com/Datawheel/geoshaper/archive/0.0.2.tar.gz",
     author="Carlos Navarrete",
     author_email="cnavarreteliz@gmail.com",
     license="MIT",
